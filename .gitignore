@@ -21,3 +21,5 @@ calcurse/
 pavucontrol.ini
 user-dirs.dirs
 dconf
+GIMP/
+QtProject.conf

@@ -112,20 +112,6 @@ super + {r, s}
 F7
   toggletouch
 
-# Audio Control
-# ALSA Controls
-#super + {_, shift} + p
-#  alsavolctrl Headphone {2%+, 2%-}
-#
-#super + {_, shift} + s
-#  alsavolctrl Speaker {2%+, 2%-}
-#
-#super + {Up, Down}
-#  alsavolctrl Master {2%+, 2%-}
-#
-#super + m
-#  alsavolctrl All mute
-
 # Pulse Controls
 super + {Up, Down}
   pulsevolctrl "output-vol" "alsa_output.pci-0000_00_1f.3.analog-stereo" {+2%, -2%}
@@ -152,7 +138,7 @@ super + {Right, Left}
   light {-A 5, -U 5} && polybar-msg hook backlight 1
 
 # Screenshots
-PrintScr
+Print
   screenshot full
 
 shift + Print
@@ -170,24 +156,3 @@ super + d
 
 super + Return
   $TERMINAL
-
-super + {alt, Shift_L} + Return
-  {st, stabmux}
-
-# Snaps
-super + alt + 
-  snap run slack
-
-super + alt + {k, o, g, b, e, f, v, s, d}
-  {kdenlive, obs, gimp, $BROWSER, thunderbird, spacefm, virtualbox, spotify, discord-canary}
-
-super + e
-  kill -s USR1 $(pidof deadd-notification-center)
-
-# Tracking Apps
-#super + alt + {a, r, t, p, n, c, j}
-#  bspc rule -a st-256color -o state=floating rectangle=800x500+100+100 sticky=on && $TERMINAL -e {alsamixer, lf, transmission-remote-cli, htop, nvim, calcurse, joplin}
-
-super + alt + {a, r, t, h, n, c, j, p}
-  $TERMINAL -e {alsamixer, lf, transmission-remote-cli, htop, nvim, calcurse, joplin, pulsemixer}
-l

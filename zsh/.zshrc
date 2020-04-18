@@ -70,7 +70,8 @@ ZSH_THEME=""
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
     z
-    zsh-autosuggestions)
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +103,9 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell-variables/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell-variables/aliasrc"
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi

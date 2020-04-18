@@ -1,40 +1,71 @@
 set nocompatible              " be iMproved, required
-filetype plugin on            " required
-syntax enable
+" filetype plugin on            " required
+syntax on
 
-set path+=**
+set noerrorbells
 set nu rnu
 set wildmenu
 set laststatus=2
 """""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""
-" Display different types of white spaces.
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
-
-" Setting encoding
 set encoding=utf-8
-" Ignore case when searching
-set ignorecase
-
-" Automatically wrap text that extends beyond the screen length.
-set wrap
-
-" Show partial Commands
+set termguicolors
 set showcmd
-
-" Highlight search results
 set hlsearch
-
-" Makes search act like search in modern browsers
 set incsearch
-
-" Don't redraw while executing macros (good performance config)
 set lazyredraw
-
-" Show matching brackets when text indicator is over them
 set showmatch
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.local/share/nvim/undodir
+set undofile
+
+"""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""
+call plug#begin()
+Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'preservim/nerdtree'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'tpope/vim-surround'
+Plug 'itchyny/lightline.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'ap/vim-css-color'
+Plug 'edkolev/tmuxline.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""
+" Colorscheme
+"""""""""""""""""""""""""""""""""""""""
+colorscheme gruvbox
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+
+"""""""""""""""""""""""""""""""""""""""
+" Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smarttab
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set nowrap
 
 """""""""""""""""""""""""""""""""""""""
 " Key Mapping
@@ -46,27 +77,6 @@ let mapleader=" "
 nmap <leader>w :w<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>q :q<cr>
-
-"""""""""""""""""""""""""""""""""""""""
-" Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
 
 """""""""""""""""""""""""""""""""""""""
 " Moving around, tabs, windows and buffers
@@ -94,20 +104,3 @@ let g:tmuxline_preset = {
       \'y'    : '%R',
       \'z'    : '#H'}
 
-"""""""""""""""""""""""""""""""""""""""
-" Plugins
-"""""""""""""""""""""""""""""""""""""""
-call plug#begin()
-Plug 'tpope/vim-commentary'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'preservim/nerdtree'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'tpope/vim-surround'
-Plug 'itchyny/lightline.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'ap/vim-css-color'
-Plug 'edkolev/tmuxline.vim'
-call plug#end()
