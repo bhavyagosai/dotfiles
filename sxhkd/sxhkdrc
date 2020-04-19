@@ -97,14 +97,11 @@ super + shift + e
   betterlockscreen -l
 
 super + shift + c
-  toggleprogram "compton" "-b"
+  toggleprogram "picom" "-b"
 
 #---Script Keys---#
 super + {x, u, n, w, i, g, a}
   {dmonitor "eDP-1" "HDMI-1", updatepackages, notifytorrents, devenv, importandroid, openterminalin, dcalc}
-
-super + {b, c, e}
-  {bookmenu -p "Select a bookmark" -b ~/.config/bookmenu/browser -co $BROWSER, bookmenu -p "Select a config" -b ~/.config/bookmenu/configs -co "$TERMINAL -e nvim"}
 
 super + {r, s}
   $TERMINAL -e {dman ., dlfile}

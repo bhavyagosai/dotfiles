@@ -5,38 +5,40 @@
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
-	bat="cat /sys/class/power_supply/BAT?/capacity" \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -v" \
-	mkd="mkdir -pv" \
-	yt="youtube-dl --add-metadata -i" \
-	yta="yt -x -f bestaudio/best" \
-	ffmpeg="ffmpeg -hide_banner"
+    bat="cat /sys/class/power_supply/BAT?/capacity" \
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -v" \
+    mkd="mkdir -pv" \
+    yt="youtube-dl --add-metadata -i" \
+    yta="yt -x -f bestaudio/best" \
+    ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi"
+    ls="ls -hN --color=auto --group-directories-first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ccat="highlight --out-format=ansi"
 
 # These common commands are just too long! Abbreviate them.
 alias \
-	ka="killall" \
-	g="git" \
-	trem="transmission-remote" \
-	sdn="sudo shutdown -h now" \
-	f="$FILE" \
-	e="$EDITOR" \
-	v="$EDITOR" \
-	p="sudo pacman" 
+    ka="killall" \
+    trem="transmission-remote" \
+    sdn="sudo shutdown -h now" \
+    f="$FILE" \
+    e="$EDITOR" \
+    v="$EDITOR" \
+    p="sudo pacman"
 
+# Git alias
+alias \
+    g="git" \
+    gs="git status"
 
 # Some other stuff
 alias \
-	magit="nvim -c MagitOnly" \
-	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
-	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
-	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
-	irssi="irssi --config=${XDG_CONFIG_HOME}/irssi/config --home=${XDG_DATA_HOME}/irssi"
+    magit="nvim -c MagitOnly" \
+    weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+    tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+    irssi="irssi --config=${XDG_CONFIG_HOME}/irssi/config --home=${XDG_DATA_HOME}/irssi"

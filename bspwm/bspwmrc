@@ -51,7 +51,7 @@ bspc config bottom_padding 0
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config border_width 2
-bspc config window_gap 10
+bspc config window_gap 5
 
 ###---Rules---###
 bspc rule -a Gimp desktop='^8' state=floating follow=on
@@ -59,5 +59,3 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-
-

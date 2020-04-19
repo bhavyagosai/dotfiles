@@ -1,8 +1,7 @@
 set nocompatible              " be iMproved, required
-" filetype plugin on            " required
+filetype plugin on            " required
 syntax on
 
-set noerrorbells
 set nu rnu
 set wildmenu
 set laststatus=2
@@ -27,30 +26,34 @@ set undofile
 " Plugins
 """""""""""""""""""""""""""""""""""""""
 call plug#begin()
+" Tools
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdtree'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
-Plug 'plasticboy/vim-markdown'
-Plug 'xuhdev/vim-latex-live-preview'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-Plug 'ap/vim-css-color'
 Plug 'edkolev/tmuxline.vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'junegunn/goyo.vim'
+" Syntax & File type related
+Plug 'plasticboy/vim-markdown'
+Plug 'ap/vim-css-color'
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" Colorscheme
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""
 " Colorscheme
 """""""""""""""""""""""""""""""""""""""
+let g:gruvbox_contrast_dark='hard' " Must be set before colorscheme to work properly
 colorscheme gruvbox
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 set background=dark
-let g:gruvbox_contrast_dark='hard'
+set colorcolumn=80
 
 """""""""""""""""""""""""""""""""""""""
 " Text, tab and indent related
@@ -70,6 +73,8 @@ set nowrap
 """""""""""""""""""""""""""""""""""""""
 " Key Mapping
 """""""""""""""""""""""""""""""""""""""
+map <C-n> :NERDTreeToggle<CR>
+
 " Setting the leader key
 let mapleader=" "
 
@@ -85,7 +90,6 @@ nmap <leader>q :q<cr>
 map <silent> <leader><cr> :noh<cr>
 
 "" Markdown Preview Settings
-"Setting default browser for markdown preview to brave
 let g:instant_markdown_browser = "firefox --new-window"
 let g:instant_markdown_python = 1
 
