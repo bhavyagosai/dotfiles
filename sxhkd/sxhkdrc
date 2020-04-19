@@ -97,7 +97,7 @@ super + shift + e
   betterlockscreen -l
 
 super + shift + c
-  toggleprogram "picom" "-b"
+  toggleprogram "picom" "--experimental-backends"
 
 #---Script Keys---#
 super + {x, u, n, w, i, g, a}
