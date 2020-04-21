@@ -94,7 +94,7 @@ super + shift + {r, s}
 
 # Lock the screen
 super + shift + e
-  betterlockscreen -l
+  betterlockscreen -l dim
 
 super + shift + c
   toggleprogram "picom" "--experimental-backends"

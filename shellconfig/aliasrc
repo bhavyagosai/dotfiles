@@ -35,7 +35,7 @@ alias \
 alias \
     g="git" \
     gs="git status" \
-    gs="git add"
+    ga="git add"
 
 # Some other stuff
 alias \

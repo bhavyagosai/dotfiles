@@ -68,7 +68,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
+plugins=(
     z
     zsh-autosuggestions
 )
@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(starship init zsh)"
 
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell-variables/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell-variables/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shellconfig/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shellconfig/aliasrc"
 
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
         export TERM='xterm-256color'

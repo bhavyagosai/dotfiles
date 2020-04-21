@@ -7,11 +7,11 @@
 "=================================="
 "       Begin Plugins Section      "
 "=================================="
-if ! filereadable(expand('~/.local/share/nvim/site/autoload/plug.vim'))
-        echo "Downloading junegunn/vim-plug to manage plugins..."
-        silent !mkdir -p ~/.config/nvim/autoload/
-        silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
-        autocmd VimEnter * PlugInstall
+if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
 call plug#begin()
@@ -99,6 +99,14 @@ let mapleader=" "
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
+" Replace all is aliased to S.
+nnoremap S :%s//g<Left><Left>
+
+" Save file as sudo on files that require root permission
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+
 
 "====================================="
 "          Split Managment            "

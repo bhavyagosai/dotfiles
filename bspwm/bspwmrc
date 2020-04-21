@@ -13,11 +13,12 @@ killall cleanfullscreen
 cleanfullscreen &
 nm-applet &
 xrdb ~/.Xresources &
-picom -b &
+picom --experimental-backends &
 launchpolybar &
 sxhkd &
 xsetroot -cursor_name left_ptr &
 dunst &
+transmission-daemon &
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile"
 
