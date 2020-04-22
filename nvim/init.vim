@@ -21,12 +21,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'jiangmiao/auto-pairs'
 
 " AESTHETICS
 Plug 'morhetz/gruvbox'
@@ -175,3 +176,4 @@ map <C-n> :NERDTreeToggle<CR>
 " Integration with goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
