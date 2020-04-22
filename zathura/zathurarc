@@ -1,0 +1,47 @@
+set recolor "false"
+
+set completion-bg "#0F161E"
+set completion-fg "#8addc0"
+set completion-group-bg "#0F161E"
+set completion-group-fg "#6e981a"
+set completion-highlight-bg "#8addc0"
+set completion-highlight-fg "#0F161E"
+
+set recolor-lightcolor "#0F161E"
+set recolor-darkcolor "#8addc0"
+set default-bg "#0F161E"
+
+set inputbar-bg "#0F161E"
+set inputbar-fg "#8addc0"
+set notification-bg "#0F161E"
+set notification-fg "#8addc0"
+set notification-error-bg "#136e5d"
+set notification-error-fg "#8addc0"
+set notification-warning-bg "#136e5d"
+set notification-warning-fg "#8addc0"
+set statusbar-bg "#0F161E"
+set statusbar-fg "#8addc0"
+set index-bg "#0F161E"
+set index-fg "#8addc0"
+set index-active-bg "#8addc0"
+set index-active-fg "#0F161E"
+set render-loading-bg "#0F161E"
+set render-loading-fg "#8addc0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
+map <C-j> navigate next
+map <C-k> navigate previous
