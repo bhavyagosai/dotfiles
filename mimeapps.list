@@ -1,0 +1,7 @@
+[Added Associations]
+image/png=userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;mupdf.desktop;
+application/pdf=mupdf.desktop;
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop
+image/png=mupdf.desktop
