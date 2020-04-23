@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
+" Plug 'airblade/vim-gitgutter'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
@@ -59,8 +60,8 @@ set nocompatible              " be iMproved, required
 filetype plugin on            " required
 syntax on
 
-set nu rnu
-set wildmenu
+set number relativenumber
+set wildmode
 set laststatus=2
 set list
 set encoding=utf-8
@@ -92,7 +93,6 @@ set ai "Auto indent
 set si "Smart indent
 set nowrap
 
-
 "====================================="
 "              Keybinds               "
 "====================================="
@@ -106,8 +106,6 @@ nnoremap S :%s//g<Left><Left>
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-
 
 "====================================="
 "          Split Managment            "
@@ -136,13 +134,6 @@ nnoremap <S-Q> :only<CR>
 "====================================="
 
 
-"====================================="
-"           Colorscheme               "
-"====================================="
-let g:gruvbox_contrast_dark='hard' " Must be set before colorscheme to work properly
-colorscheme gruvbox
-set background=dark
-set colorcolumn=80
 
 "====================================="
 "          Plugin Settings            "
@@ -177,3 +168,21 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+"Git Gutter
+highlight GitGutterAdd guifg=#009900 ctermfg=Green
+highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
+highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
+let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
+let g:gitgutter_highlight_linenrs = 1
+
+"====================================="
+"           Colorscheme               "
+"====================================="
+"Colorscheme must be set in last to avoid coloscheme issues with other plugins
+let g:gruvbox_contrast_dark='hard' " Must be set before colorscheme to work properly
+colorscheme gruvbox
+set background=dark
+set colorcolumn=80
