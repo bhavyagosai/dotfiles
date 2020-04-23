@@ -25,7 +25,8 @@ lxsession &
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/SHELL/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/SHELL/aliasrc"
 
-[ -f "${HOME}/.profile" ] && source "${HOME}/.profile"
+# [ -f "${HOME}/.profile" ] && source "${HOME}/.profile"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/.profile" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/.profile"
 
 ###---Global Settings---###
 bspc config automatic_scheme alternate
