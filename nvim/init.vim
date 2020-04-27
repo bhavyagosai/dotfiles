@@ -61,7 +61,6 @@ filetype plugin on            " required
 syntax on
 
 set number relativenumber
-set wildmode
 set laststatus=2
 set list
 set encoding=utf-8
@@ -106,6 +105,9 @@ nnoremap S :%s//g<Left><Left>
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+" Compile C/C++ code
+map <leader>cc :w <CR> :!gcc % -o %< && ./%< <CR>
 
 "====================================="
 "          Split Managment            "
