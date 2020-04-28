@@ -35,7 +35,10 @@ alias \
 alias \
     g="git" \
     gs="git status" \
-    ga="git add"
+    ga="git add" \
+    gcmsg="git commit -m" \
+    gcom="git checkout master" \
+    gcod="git checkout develop"
 
 # Some other stuff
 alias \
