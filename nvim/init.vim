@@ -29,6 +29,7 @@ Plug 'ap/vim-css-color'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'jiangmiao/auto-pairs'
+Plug 'mzlogin/vim-markdown-toc'
 
 " AESTHETICS
 Plug 'morhetz/gruvbox'
@@ -109,6 +110,12 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " Compile C/C++ code
 map <leader>cc :w <CR> :!g++ % -o %< && ./%< <CR>
 
+" remap jj to escape insert mode
+inoremap jj <Esc>
+
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+imap <C-BS> <C-W>
+
 "====================================="
 "          Split Managment            "
 "====================================="
@@ -141,8 +148,7 @@ nnoremap <S-Q> :only<CR>
 "          Plugin Settings            "
 "====================================="
 " Markdown Preview Settings
-let g:instant_markdown_browser = "firefox --new-window"
-let g:instant_markdown_python = 1
+let g:mkdp_browser = 'brave'
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
