@@ -10,7 +10,7 @@ alert = #ed0b0b
 
 [bar/bar]
 monitor = ${env:MONITOR:eDP-1}
-monitor-fallback =
+monitor-fallback = eDP1
 monitor-strict = false
 monitor-exact = true
 #override-redirect = true
@@ -152,7 +152,7 @@ initial = 1
 [module/torrents]
 type = custom/ipc
 hook-0 = i3torrents
-click-left = $TERMINAL -e tremc &
+click-left = $TERMINAL -e stig &
 initial = 1
 
 [module/memory]
