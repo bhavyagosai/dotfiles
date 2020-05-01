@@ -1,3 +1,7 @@
+# Source this file as .zprofile in home directory
+
+
+
 # Adds '~/.local/bin to $PATH'
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export PATH="$PATH:$HOME/.local/bin/polybar:$HOME/.local/bin/bspwm:$HOME/.local/bin/alsa:$HOME/.local/bin/pulse:$HOME/.local/bin/transmission:$HOME/.local/share/cargo/bin"
