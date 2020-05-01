@@ -113,9 +113,6 @@ map <leader>cc :w <CR> :!g++ % -o %< && ./%< <CR>
 " remap jj to escape insert mode
 inoremap jj <Esc>
 
-" Map Ctrl-Backspace to delete the previous word in insert mode.
-imap <C-BS> <C-W>
-
 "====================================="
 "          Split Managment            "
 "====================================="
