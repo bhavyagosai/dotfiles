@@ -11,7 +11,6 @@ alias \
     rm="rm -v" \
     mkd="mkdir -pv" \
     yt="youtube-dl --add-metadata -i" \
-    yta="yt -x -f bestaudio/best" \
     ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
@@ -38,7 +37,8 @@ alias \
     ga="git add" \
     gcmsg="git commit -m" \
     gcom="git checkout master" \
-    gcod="git checkout develop"
+    gcod="git checkout develop" \
+    glgao="git log --graph --all --oneline"
 
 # Some other stuff
 alias \
