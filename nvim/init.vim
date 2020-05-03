@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
+" Plug 'dense-analysis/ale'
 " Plug 'airblade/vim-gitgutter'
 
 " SYNTAX
@@ -166,7 +167,7 @@ let g:tmuxline_preset = {
 map <leader>f :Goyo<CR>
 
 " NerdTree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " Limelight
 " Integration with goyo
@@ -182,6 +183,21 @@ nmap [h <Plug>(GitGutterPrevHunk)
 let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
 let g:gitgutter_highlight_linenrs = 1
+
+"Ale
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['pylint']
+\}
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'python': ['black']
+\}
+
+let g:ale_fix_on_save = 1
 
 "====================================="
 "           Colorscheme               "
