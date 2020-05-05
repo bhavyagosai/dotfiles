@@ -109,7 +109,7 @@ nnoremap S :%s//g<Left><Left>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile C/C++ code
-map <leader>cc :w <CR> :!g++ % -o %< && ./%< <CR>
+map <leader>cc :w <CR> :!g++ % -o %< && %< <CR>
 
 " remap jj to escape insert mode
 inoremap jj <Esc>
@@ -184,20 +184,20 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_map_keys = 0
 let g:gitgutter_highlight_linenrs = 1
 
-"Ale
+""Ale
 
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['pylint']
-\}
+"let g:ale_linters = {
+"\   'javascript': ['eslint'],
+"\   'python': ['pylint']
+"\}
 
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'python': ['black']
-\}
+"let g:ale_fixers = {
+"\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+"\   'javascript': ['eslint'],
+"\   'python': ['black']
+"\}
 
-let g:ale_fix_on_save = 1
+"let g:ale_fix_on_save = 1
 
 "====================================="
 "           Colorscheme               "
