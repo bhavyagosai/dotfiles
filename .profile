@@ -38,6 +38,7 @@ export NVM_DIR="$XDG_DATA_HOME"/nvm
 export _Z_DATA="$XDG_DATA_HOME/z"
 export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
+export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
