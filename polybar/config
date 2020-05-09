@@ -47,7 +47,7 @@ font-3 = "Font Awesome 5 Brands:size=9;1"
 
 
 modules-left = bspwm xwindow
-modules-right = pacman-packages torrents memory backlight volume battery weather time
+modules-right =  memory backlight volume battery  time
 
 tray-position = right
 tray-padding = 1
