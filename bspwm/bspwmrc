@@ -18,7 +18,6 @@ launchpolybar &
 sxhkd &
 xsetroot -cursor_name left_ptr &
 dunst &
-transmission-daemon &
 lxsession &
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/xprofile"
