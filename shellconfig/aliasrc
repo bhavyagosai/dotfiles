@@ -20,7 +20,7 @@ alias \
     diff="diff --color=auto" \
     ccat="highlight --out-format=ansi"
 
-# These common commands are just too long! Abbreviate them.
+# Application aliases
 alias \
     ka="killall" \
     trem="transmission-remote" \

@@ -2,7 +2,7 @@
 
 # Alias for regularly used file
 alias \
-    vconfig = "v ~/.config/nvim/init.vim"
+    vconfig="v ~/.config/nvim/init.vim"
 
 # Bookmark of frequently used directory
 
