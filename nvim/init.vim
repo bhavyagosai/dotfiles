@@ -68,25 +68,51 @@ set list
 set encoding=utf-8
 set termguicolors
 set showcmd
-set hlsearch
-set incsearch
 set lazyredraw
-set showmatch
-set smartcase
-set noswapfile
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
+set noswapfile
+set nowb
 set undodir=~/.local/share/nvim/undodir
 set undofile
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Ignore case when searching
+set ignorecase
 set mouse=a
+
+set so=7
+
+" Makes search act like search in modern browsers
+set magic
+
+" Add a bit extra margin to the left
+set foldcolumn=1
 
 "====================================="
 "    Text, tab and indent related     "
 "====================================="
+set expandtab
+set smarttab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
-set expandtab
-set smarttab
 set lbr
 set tw=500
 
