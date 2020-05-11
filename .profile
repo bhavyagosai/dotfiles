@@ -30,7 +30,6 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
@@ -39,6 +38,9 @@ export _Z_DATA="$XDG_DATA_HOME/z"
 export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
+
+export RUSTUP_HOME=${XDG_DATA_HOME:-$HOME/.local/share}/rustup
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
