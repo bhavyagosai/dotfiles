@@ -9,8 +9,8 @@ secondary = ${xrdb:color3}
 alert = #ed0b0b
 
 [bar/bar]
-monitor = ${env:MONITOR:eDP-1}
-monitor-fallback = eDP1
+monitor = ${env:MONITOR:eDP1}
+monitor-fallback = eDP-1
 monitor-strict = false
 monitor-exact = true
 #override-redirect = true
