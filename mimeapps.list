@@ -2,8 +2,11 @@
 image/png=feh.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;mupdf.desktop;
 application/pdf=mupdf.desktop;
 text/plain=sublime_text_3.desktop;
+application/json=sublime_text_3.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 image/png=mupdf.desktop
 text/plain=sublime_text_3.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
