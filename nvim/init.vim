@@ -135,8 +135,8 @@ nnoremap S :%s//g<Left><Left>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile C/C++ code
-map <leader>ccpp :w <CR> :!g++ % -o %< && %< <CR>
-map <leader>cc :w <CR> :!gcc % -o %< && %< <CR>
+map <leader>ccpp :w <CR> :!g++ "%" -o "%<" && "./%<" <CR>
+map <leader>cc :w <CR> :!gcc "%" -o "%<" && "%<" <CR>
 
 " remap jj to escape insert mode
 inoremap jj <Esc>
