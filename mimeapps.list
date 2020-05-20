@@ -4,9 +4,12 @@ application/pdf=mupdf.desktop;
 text/plain=sublime_text_3.desktop;
 application/json=sublime_text_3.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/x-shellscript=sublime_text_3.desktop;nvim.desktop;
+text/x-python=sublime_text_3.desktop;vim.desktop;nvim.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 image/png=mupdf.desktop
 text/plain=sublime_text_3.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+text/x-python=nvim.desktop
