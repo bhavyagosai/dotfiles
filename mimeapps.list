@@ -1,11 +1,13 @@
 [Added Associations]
-image/png=feh.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;mupdf.desktop;
+image/png=mupdf.desktop;feh.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;
 application/pdf=mupdf.desktop;
-text/plain=sublime_text_3.desktop;
+text/plain=vim.desktop;nvim.desktop;sublime_text_3.desktop;
 application/json=sublime_text_3.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/x-shellscript=sublime_text_3.desktop;nvim.desktop;
 text/x-python=sublime_text_3.desktop;vim.desktop;nvim.desktop;
+text/csv=sublime_text_3.desktop;
+text/x-python3=sublime_text_3.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
