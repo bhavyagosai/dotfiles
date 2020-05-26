@@ -135,11 +135,15 @@ nnoremap S :%s//g<Left><Left>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile C/C++ code
-map <leader>ccpp :w <CR> :!g++ "%" -o "%<" && "./%<" <CR>
+map <leader>ccpp :w <CR> :!g++ "%" -o "%<" && "%<" <CR>
 map <leader>cc :w <CR> :!gcc "%" -o "%<" && "%<" <CR>
 
 " remap jj to escape insert mode
 inoremap jj <Esc>
+
+" Save and exit with leader keybinding
+map <leader>w :w<CR>
+map <leader>wq :wq<CR>
 
 "====================================="
 "          Split Managment            "
@@ -172,9 +176,6 @@ nnoremap <S-Q> :only<CR>
 "====================================="
 "          Plugin Settings            "
 "====================================="
-" Markdown Preview Settings
-let g:mkdp_browser = 'brave'
-
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
