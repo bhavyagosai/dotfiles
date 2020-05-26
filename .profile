@@ -4,8 +4,9 @@
 
 # Adds '~/.local/bin to $PATH'
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
-export PATH="$PATH:$HOME/.local/bin/polybar:$HOME/.local/bin/bspwm:$HOME/.local/bin/alsa:$HOME/.local/bin/pulse:$HOME/.local/bin/transmission:$HOME/.local/share/cargo/bin"
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
 export PATH="$PATH:$HOME/.local/share/gem/bin"
+export PATH="$PATH:$HOME/.local/share/npm/bin"
 
 # Default programs:
 export EDITOR="nvim"
@@ -32,15 +33,18 @@ export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export DOCKER_CONFIG="${XDG_CONFIG_HOME}/docker"
 export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-export NVM_DIR="$XDG_DATA_HOME"/nvm
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
 export _Z_DATA="$XDG_DATA_HOME/z"
 export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 
-export RUSTUP_HOME=${XDG_DATA_HOME:-$HOME/.local/share}/rustup
+export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+
+export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
