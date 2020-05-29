@@ -45,6 +45,7 @@ Plug 'altercation/vim-colors-solarized'
 " UTILS
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'godlygeek/tabular'
 
 " ICEBOX
 " Plug 'sirver/UltiSnips'
