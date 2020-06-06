@@ -73,6 +73,22 @@ set lazyredraw
 
 " Makes search act like search in modern browsers
 set incsearch
+set wrapscan
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" Highlight search results
+set hlsearch
+
+" When searching try to be smart about cases
+set smartcase
+
+" TODO: Give it good description
+set so=7
+
+" Show the current cursor position in bottom right
+set ruler
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -85,20 +101,9 @@ set undofile
 set noerrorbells
 set novisualbell
 
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" When searching try to be smart about cases
-set smartcase
-
-" Highlight search results
-set hlsearch
-
 " Ignore case when searching
 set ignorecase
 set mouse=a
-
-set so=7
 
 " Makes search act like search in modern browsers
 set magic
@@ -177,6 +182,8 @@ nnoremap <S-Q> :only<CR>
 "====================================="
 "          Plugin Settings            "
 "====================================="
+" YouCompleteMe
+
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
 
