@@ -46,6 +46,8 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
+export CALIBRE_USE_DARK_PALETTE=1
+
 # Other program settings:
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
