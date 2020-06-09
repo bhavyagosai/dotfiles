@@ -7,6 +7,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
 export PATH="$PATH:$HOME/.local/share/gem/bin"
 export PATH="$PATH:$HOME/.local/share/npm/bin"
+export PATH="$PATH:$HOME/.local/share/go/bin"
 
 # Default programs:
 export EDITOR="nvim"
@@ -19,6 +20,12 @@ export STATUSBAR="polybar"
 # eval "$(sed 's/^[^#].*/export &/g;t;d' ~/.config/user-dirs.dirs)"
 
 # ~/ Clean-up:
+
+# Language's Home directory
+export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -40,8 +47,6 @@ export GEM_HOME="$XDG_DATA_HOME/gem"
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME/gem"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 
-export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
-export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 
 export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
