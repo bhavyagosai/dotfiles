@@ -7,6 +7,8 @@
 "=================================="
 "       Begin Plugins Section      "
 "=================================="
+
+" Auto download
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
     echo "Downloading junegunn/vim-plug to manage plugins..."
     silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
@@ -50,7 +52,6 @@ Plug 'godlygeek/tabular'
 " ICEBOX
 " Plug 'sirver/UltiSnips'
 " Plug 'vim-syntastic/syntastic'
-" Plug 'godlygeek/tabular'
 " Plug 'camspiers/animate.vim'
 " Plug 'camspiers/lens.vim'
 " ----------------------------------------------------------------------- "
@@ -126,6 +127,9 @@ set ai "Auto indent
 set si "Smart indent
 set nowrap
 
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+
 "====================================="
 "              Keybinds               "
 "====================================="
@@ -144,15 +148,12 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 map <leader>ccpp :w <CR> :!g++ "%" -o "%<" && "%<" <CR>
 map <leader>cc :w <CR> :!gcc "%" -o "%<" && "%<" <CR>
 
-" remap jj to escape insert mode
-inoremap jj <Esc>
-
-" Save and exit with leader keybinding
-map <leader>w :w<CR>
-map <leader>wq :wq<CR>
+" remap <C-j> to escape insert mode
+inoremap <C-j> <Esc>
+vnoremap <C-j> <Esc>
 
 "====================================="
-"          Split Managment            "
+"         Split/Tab Managment         "
 "====================================="
 " Splits open at the bottom and right, this is best in life
 set splitbelow splitright
@@ -173,10 +174,27 @@ nnoremap c<C-l> :rightb vsp new<CR>
 nnoremap <C-q> :q<CR>
 nnoremap <S-Q> :only<CR>
 
-"====================================="
-"     Moving around commands          "
-"====================================="
+" Tabs
+map <leader>to :tabnew<cr>
+map <leader>tQ :tabonly<cr>
+map <leader>tq :tabclose<cr>
+map <leader>tn :tabnext 
 
+
+"====================================="
+"          Editing mapping            "
+"====================================="
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+
+"====================================="
+"               Misc                  "
+"====================================="
+map <leader>bs :e ~/scratch/tmp.md<CR>
 
 
 "====================================="
@@ -203,22 +221,13 @@ let g:tmuxline_preset = {
 map <leader>f :Goyo<CR>
 
 " NerdTree
-map <leader>n :NERDTreeToggle<CR>
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark 
+map <leader>nf :NERDTreeFind<cr>
 
-" Limelight
-" Integration with goyo
+" Limelight & Integration with goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-
-"Git Gutter
-highlight GitGutterAdd guifg=#009900 ctermfg=Green
-highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
-highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
-let g:gitgutter_enabled = 1
-let g:gitgutter_map_keys = 0
-let g:gitgutter_highlight_linenrs = 1
 
 ""Ale
 
