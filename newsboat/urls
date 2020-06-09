@@ -1,5 +1,14 @@
-https://www.archlinux.org/feeds/news/
-https://feeds.fireside.fm/linuxunplugged/rss
-https://news.ycombinator.com/rss
-https://lunduke.com/index.xml
-https://projecteuler.net/rss2_euler.xml
+"query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
+"query:Unread:unread = \"yes\"" meta
+
+https://lunduke.com/index.xml linux
+https://news.ycombinator.com/rss linux
+https://www.archlinux.org/feeds/news linux
+https://projecteuler.net/rss2_euler.xml maths
+https://feeds.fireside.fm/linuxunplugged/rss linux
+https://www.reddit.com/r/archlinux/new.rss reddit
+https://www.reddit.com/r/linux/new.rss reddit
+https://www.reddit.com/r/bspwm/new.rss reddit
+https://www.reddit.com/r/ManjaroLinux/new.rss reddit
+https://www.reddit.com/r/Ubuntu/new.rss reddit
+https://www.reddit.com/r/commandline/new.rss reddit
