@@ -24,8 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
-" Plug 'dense-analysis/ale'
-" Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
@@ -113,6 +112,14 @@ set magic
 set foldcolumn=1
 
 "====================================="
+"           Colorscheme               "
+"====================================="
+set background=dark
+let g:gruvbox_contrast_dark='hard' " Must be set before colorscheme to work properly
+colorscheme gruvbox
+set colorcolumn=80
+
+"====================================="
 "    Text, tab and indent related     "
 "====================================="
 set expandtab
@@ -165,14 +172,14 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Open new splits in a semantic way (tip from *nixcasts)
-nnoremap c<C-h> :lefta vsp new<CR>
-nnoremap c<C-j> :bel sp new<CR>
-nnoremap c<C-k> :abo sp new<CR>
-nnoremap c<C-l> :rightb vsp new<CR>
+nnoremap <leader>sh :lefta vsp new<CR>
+nnoremap <leader>sj :bel sp new<CR>
+nnoremap <leader>sk :abo sp new<CR>
+nnoremap <leader>sl :rightb vsp new<CR>
 
 " Closing splits in a sane way
-nnoremap <C-q> :q<CR>
-nnoremap <S-Q> :only<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>Q :only<CR>
 
 " Tabs
 map <leader>to :tabnew<cr>
@@ -201,6 +208,8 @@ map <leader>bs :e ~/scratch/tmp.md<CR>
 "          Plugin Settings            "
 "====================================="
 " YouCompleteMe
+let g:ycm_add_preview_to_completeopt = 0
+set completeopt-=preview
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -223,7 +232,7 @@ map <leader>f :Goyo<CR>
 " NerdTree
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
-map <leader>nf :NERDTreeFind<cr>
+map <leader>nf :NERDTreeFind 
 
 " Limelight & Integration with goyo
 autocmd! User GoyoEnter Limelight
@@ -244,11 +253,3 @@ autocmd! User GoyoLeave Limelight!
 
 "let g:ale_fix_on_save = 1
 
-"====================================="
-"           Colorscheme               "
-"====================================="
-"Colorscheme must be set in last to avoid coloscheme issues with other plugins
-let g:gruvbox_contrast_dark='hard' " Must be set before colorscheme to work properly
-colorscheme gruvbox
-set background=dark
-set colorcolumn=80
