@@ -24,7 +24,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
@@ -44,13 +44,14 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'altercation/vim-colors-solarized'
 
 " UTILS
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'sirver/UltiSnips'
 Plug 'godlygeek/tabular'
+Plug 'sheerun/vim-polyglot'
+Plug 'xuhdev/vim-latex-live-preview'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " ICEBOX
-" Plug 'sirver/UltiSnips'
-" Plug 'vim-syntastic/syntastic'
 " Plug 'camspiers/animate.vim'
 " Plug 'camspiers/lens.vim'
 " ----------------------------------------------------------------------- "
@@ -210,6 +211,7 @@ map <leader>bs :e ~/scratch/tmp.md<CR>
 " YouCompleteMe
 let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
+let g:ycm_key_list_stop_completion = ['<C-y>']
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -253,3 +255,6 @@ autocmd! User GoyoLeave Limelight!
 
 "let g:ale_fix_on_save = 1
 
+" Ultisnips
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<C-b>"
