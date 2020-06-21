@@ -1,0 +1,40 @@
+snippet compi
+	/* author: Henil2911 */
+	#include <bits/stdc++.h>
+	
+	#define fastIO std::ios_base::sync_with_stdio(false);std::cin.tie(NULL);std::cout.tie(NULL);
+	#define dd 	double
+	#define ll 	long long
+	#define ull unsigned ll
+	
+	#define PI 	3.14159265358979323846
+	#define R2 	1.41421356237309504880
+	
+	#define min3(a, b, c) min(a, min(b,c))
+	#define max3(a, b, c) max(a, max(b,c))
+	#define deb(x) std::cout << "---" << #x << " = " << x << "---" << "\n" 
+	
+	void solve();
+	bool isPowerOfTwo(int );
+	
+	int main() {
+	    fastIO;
+		int tstc;
+		std::cin >> tstc;
+		while(tstc--){
+		    solve();
+		}
+		return 0;
+	}
+	
+	void solve()
+	{
+	    ${1}
+	}
+
+	bool isPowerOfTwo(int x)
+    {
+        // x will check if x == 0 and !(x & (x - 1)) will check if x is a power of 2 or not
+        return (x && !(x & (x - 1)));
+    }
+endsnippet
