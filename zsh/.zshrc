@@ -76,9 +76,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    z
     zsh-autosuggestions
     fast-syntax-highlighting
+    autojump
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,6 +122,8 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[ -f /etc/profile.d/autojump.sh ] && source /etc/profile.d/autojump.sh
 
 set -o vi
 bindkey '^R' history-incremental-pattern-search-backward
+autoload -Uz compinit && compinit
