@@ -68,8 +68,8 @@ syntax on
 
 set number relativenumber
 set laststatus=2
-set list
 set encoding=utf-8
+set list
 set termguicolors
 set showcmd
 set lazyredraw
@@ -125,16 +125,13 @@ set colorcolumn=80
 "====================================="
 "    Text, tab and indent related     "
 "====================================="
+set autoindent
 set expandtab
-set smarttab
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set lbr
 set tw=500
-
-set ai "Auto indent
-" set si "Smart indent && This does not work for all languages should use filetype plugin indent on
 set nowrap
 
 " Configure backspace so it acts as it should act
@@ -150,9 +147,6 @@ map <silent> <leader><cr> :noh<cr>
 
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
-
-" Save file as sudo on files that require root permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile C/C++ code
 map <leader>ccpp :w<CR>:!g++ "%" -o "%<" && "./%<"<CR>
