@@ -22,9 +22,9 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
-" Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
@@ -47,6 +47,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'sirver/UltiSnips'
 Plug 'godlygeek/tabular'
 Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -62,6 +63,7 @@ call plug#end()
 "====================================="
 set nocompatible              " be iMproved, required
 filetype plugin on            " required
+filetype plugin indent on
 syntax on
 
 set number relativenumber
@@ -132,7 +134,7 @@ set lbr
 set tw=500
 
 set ai "Auto indent
-set si "Smart indent
+" set si "Smart indent && This does not work for all languages should use filetype plugin indent on
 set nowrap
 
 " Configure backspace so it acts as it should act
@@ -153,24 +155,20 @@ nnoremap S :%s//g<Left><Left>
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Compile C/C++ code
-map <leader>ccpp :w <CR> :!g++ "%" -o "%<" && "%<" <CR>
-map <leader>cc :w <CR> :!gcc "%" -o "%<" && "%<" <CR>
-
-" remap <C-j> to escape insert mode
-inoremap <C-j> <Esc>
-vnoremap <C-j> <Esc>
+map <leader>ccpp :w<CR>:!g++ "%" -o "%<" && "./%<"<CR>
+map <leader>cc :w<CR>:!gcc "%" -o "%<" && "./%<"<CR>
 
 "====================================="
 "         Split/Tab Managment         "
 "====================================="
-" Splits open at the bottom and right, this is best in life
+" Split open at the bottom and right, this is best in life
 set splitbelow splitright
 
 " Shortcutting split navigation, saving a keypress:
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <c-h> :wincmd h<CR>
+map <c-j> :wincmd j<CR>
+map <c-k> :wincmd k<CR>
+map <c-l> :wincmd l<CR>
 
 " Open new splits in a semantic way (tip from *nixcasts)
 nnoremap <leader>sh :lefta vsp new<CR>
@@ -188,6 +186,17 @@ map <leader>tQ :tabonly<cr>
 map <leader>tq :tabclose<cr>
 map <leader>tn :tabnext 
 
+"====================================="
+"       Project/File Managment        "
+"====================================="
+
+" Project View
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pf :Files<CR>
+nnoremap <leader>ps :Rg<SPACE>
+
+" Fzf
+nnoremap <c-p> :GFiles<CR>
 
 "====================================="
 "          Editing mapping            "
@@ -198,20 +207,20 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-
 "====================================="
 "               Misc                  "
 "====================================="
 map <leader>bs :e ~/scratch/tmp.md<CR>
 
-
 "====================================="
 "          Plugin Settings            "
 "====================================="
 " YouCompleteMe
-let g:ycm_add_preview_to_completeopt = 0
 set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_key_list_stop_completion = ['<C-y>']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -231,16 +240,11 @@ let g:tmuxline_preset = {
 " Goyo
 map <leader>f :Goyo<CR>
 
-" NerdTree
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
-map <leader>nf :NERDTreeFind 
-
 " Limelight & Integration with goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-""Ale
+"Ale
 
 "let g:ale_linters = {
 "\   'javascript': ['eslint'],
@@ -255,6 +259,10 @@ autocmd! User GoyoLeave Limelight!
 
 "let g:ale_fix_on_save = 1
 
+
 " Ultisnips
-" Trigger configuration.
-let g:UltiSnipsExpandTrigger="<C-b>"
+"" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnippets"]
