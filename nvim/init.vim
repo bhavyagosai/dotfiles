@@ -149,8 +149,8 @@ map <silent> <leader><cr> :noh<cr>
 nnoremap S :%s//g<Left><Left>
 
 " Compile C/C++ code
-map <leader>ccpp :w<CR>:!g++ "%" -o "%<" && "./%<"<CR>
-map <leader>cc :w<CR>:!gcc "%" -o "%<" && "./%<"<CR>
+map <leader>ccpp :w<CR>:!g++ "%" -o "%:p:r" && "%:p:r"<CR>
+map <leader>cc :w<CR>:!gcc "%" -o "%:p:r" && "%:p:r"<CR>
 
 "====================================="
 "         Split/Tab Managment         "
