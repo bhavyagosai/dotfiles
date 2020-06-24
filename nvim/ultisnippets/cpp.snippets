@@ -1,62 +1,60 @@
 snippet compi
-    /* author: Henil2911 */
-    #include <bits/stdc++.h>
+/* author: Henil2911 */
+#include <bits/stdc++.h>
 
-    #define fastIO std::ios_base::sync_with_stdio(false);std::cin.tie(NULL);std::cout.tie(NULL);
-    #define dd  double
-    #define ll  long long
-    #define ull unsigned ll
+#define fastIO std::ios_base::sync_with_stdio(false);std::cin.tie(NULL);std::cout.tie(NULL);
+typedef double dd;
+typedef long long ll;
+typedef unsigned long long ull;
 
-    #define PI  3.14159265358979323846
-    #define R2  1.41421356237309504880
+#define PI 3.14159265358979323846
+#define R2 1.41421356237309504880
 
-    #define min3(a, b, c) min(a, min(b,c))
-    #define max3(a, b, c) max(a, max(b,c))
-    #define deb(x) std::cout << "---" << #x << " = " << x << "---" << "\n"
+#define min3(a, b, c) min(a, min(b,c))
+#define max3(a, b, c) max(a, max(b,c))
+#define deb(x) std::cout << "---" << #x << " = " << x << "---" << "\n"
 
-    void solve();
-    bool is_power_of_2(ll);
-    int count_set_bit(ll);
+void solve();
+bool is_power_of_2(long long);
+int count_set_bit(long long);
+bool check_ith_bit(long long, int);
 
-    int main() {
-        fastIO;
-        int tstc;
-        std::cin >> tstc;
-        while(tstc--){
-            solve();
-        }
-        return 0;
-    }
+int main() {
+	fastIO;
+	int tstc;
+	std::cin >> tstc;
+	while(tstc--){
+		solve();
+	}
+	return 0;
+}
 
-    void solve()
-    {
-        ${1}
-    }
+void solve()
+{
+	${1}
+}
 
-    bool is_power_of_2(int x)
-    {
-        /*
-            x will check if x == 0 &&
-            !(x & (x - 1)) will check if x is a power of 2 or not
-        */
-        return (x && !(x & (x - 1)));
-    }
+bool is_power_of_2(ll x)
+{
+	/*
+		x will check if x == 0 &&
+		!(x & (x - 1)) will check if x is a power of 2 or not
+	*/
+	return (x && !(x & (x - 1)));
+}
 
-    int count_set_bit(int n)
-    {
-        while( n )
-        {
-            n = n&(n-1);
-            count++;
-        }
-        return count;
-    }
+int count_set_bit(ll n)
+{
+	int count=0;
+	while( n ) {
+		n = n&(n-1);
+		count++;
+	}
+	return count;
+}
 
-    bool check (int N)
-    {
-        if( N & (1 << i) )
-            return true;
-        else
-            return false;
-    }
+bool check_ith_bit(ll N, int i)
+{
+	return !!(N & (1 << i));
+}
 endsnippet
