@@ -2,46 +2,41 @@
 
 # Use neovim for vim if present.
 # command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+# source the bookmarks aliasis
+source $HOME/.config/shellconfig/bookmarks
 
 # Verbosity and settings that you pretty much just always are going to want.
-alias \
-    battery="cat /sys/class/power_supply/BAT?/capacity" \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    rm="rm -v" \
-    mkd="mkdir -pv" \
-    yt="youtube-dl --add-metadata -i" \
-    ffmpeg="ffmpeg -hide_banner"
+alias battery="cat /sys/class/power_supply/BAT?/capacity"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -v"
+alias mkd="mkdir -pv"
+alias yt="youtube-dl --add-metadata -i"
+alias ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
-alias \
-    ls="ls -hN --color=auto --group-directories-first" \
-    grep="grep --color=auto" \
-    diff="diff --color=auto" \
-    ccat="highlight --out-format=ansi"
+alias ls="ls -hN --color=auto --group-directories-first"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ccat="highlight --out-format=ansi"
 
 # Application aliases
-alias \
-    ka="killall" \
-    trem="transmission-remote" \
-    sdn="sudo shutdown -h now" \
-    f="$FILE" \
-    e="$EDITOR" \
-    v="$EDITOR" \
-    p="sudo pacman"
+alias ka="killall"
+alias trem="transmission-remote"
+alias sdn="sudo shutdown -h now"
+alias p="sudo pacman"
 
 # Git alias
-alias \
-    g="git" \
-    gs="git status" \
-    ga="git add" \
-    gcmsg="git commit -m" \
-    gcom="git checkout master" \
-    gcod="git checkout develop" \
-    glgao="git log --graph --all --oneline"
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gcmsg="git commit -m"
+alias gcom="git checkout master"
+alias gcod="git checkout develop"
+alias gdi="git diff"
+alias glgao="git log --graph --all --oneline"
 
 # Some other stuff
-alias \
-    magit="nvim -c MagitOnly" \
-    tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
-    irssi="irssi --config=${XDG_CONFIG_HOME}/irssi/config --home=${XDG_DATA_HOME}/irssi"
+alias magit="nvim -c MagitOnly"
+alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"

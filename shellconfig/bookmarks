@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # Alias for regularly used file
-alias \
-    vconfig="v ~/.config/nvim/init.vim"
+alias vconf="v $XDG_CONFIG_HOME/nvim/init.vim"
 
 # Bookmark of frequently used directory
 
