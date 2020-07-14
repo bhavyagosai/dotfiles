@@ -213,8 +213,8 @@ map <leader>bs :e ~/scratch/tmp.md<CR>
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_key_list_stop_completion = ['<C-y>']
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -256,7 +256,5 @@ autocmd! User GoyoLeave Limelight!
 
 " Ultisnips
 "" Trigger configuration.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsExpandTrigger="<c-b>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "ultisnippets"]
