@@ -58,3 +58,6 @@ teams/
 nvim/.netrwhist
 gtg/
 micro/
+cf/
+wireshark/
+.gitignore
