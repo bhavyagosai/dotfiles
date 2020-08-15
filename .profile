@@ -7,6 +7,7 @@ export PATH="$PATH:$HOME/.local/share/cargo/bin"
 export PATH="$PATH:$HOME/.local/share/gem/bin"
 export PATH="$PATH:$HOME/.local/share/npm/bin"
 export PATH="$PATH:$HOME/.local/share/go/bin"
+export PATH="$PATH:/opt/scilab/bin"
 
 # Default programs:
 export EDITOR="nvim"
