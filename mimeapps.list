@@ -1,6 +1,6 @@
 [Added Associations]
 image/png=mupdf.desktop;feh.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;
-application/pdf=mupdf.desktop;
+application/pdf=org.inkscape.Inkscape.desktop;mupdf.desktop;
 text/plain=sublime_text_3.desktop;vim.desktop;nvim.desktop;userapp-"$TERMINAL -e nvim"-D30TK0.desktop;
 application/json=sublime_text_3.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
@@ -25,6 +25,7 @@ audio/x-mod=nvim.desktop;
 video/mp4=vlc.desktop;
 text/x-c++src=nvim.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
+application/postscript=org.pwmt.zathura-ps.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
