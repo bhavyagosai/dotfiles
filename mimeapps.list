@@ -26,6 +26,7 @@ video/mp4=vlc.desktop;
 text/x-c++src=nvim.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
 application/postscript=org.pwmt.zathura-ps.desktop;
+video/x-msvideo=vlc.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
