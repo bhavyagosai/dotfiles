@@ -25,6 +25,7 @@ export STATUSBAR="polybar"
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export JULIA_DEPOT_PATH="$HOME/.local/share/julia"
 
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 export HISTFILE="${XDG_CONFIG_HOME:-$HOME/.config}/zsh/history"
