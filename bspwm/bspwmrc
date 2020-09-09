@@ -13,7 +13,7 @@ killall cleanfullscreen
 cleanfullscreen &
 nm-applet &
 xrdb ~/.Xresources &
-picom --experimental-backends &
+picom --experimental-backends --blur-method dual_kawase --blur-strength 5 &
 launchpolybar &
 sxhkd &
 xsetroot -cursor_name left_ptr &

@@ -23,6 +23,7 @@ export STATUSBAR="polybar"
 
 # Language's Home directory
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
+export CARGO_TARGET_DIR="$HOME/.local/share/cargo/target"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export JULIA_DEPOT_PATH="$HOME/.local/share/julia"
