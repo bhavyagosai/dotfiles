@@ -2,6 +2,7 @@
 "query:Unread:unread = \"yes\"" meta
 
 https://news.ycombinator.com/rss
+https://stopa.io/feed.rss blogs
 https://www.archlinux.org/feeds/news linux
 https://projecteuler.net/rss2_euler.xml maths
 https://feeds.fireside.fm/linuxunplugged/rss linux
@@ -9,7 +10,6 @@ https://kliu.io/index.xml blogs
 https://waitbutwhy.com/feed blogs
 https://hackaday.com/blog/feed/ blogs
 https://rsshub.app/blogs/paulgraham blogs
-https://stopa.io/feed.rss blogs
 https://danluu.com/atom.xml blogs
 https://lethain.com/feeds/ blogs
 https://programmingisterrible.com/rss blogs
@@ -17,3 +17,7 @@ http://www.aaronsw.com/weblog/index.xml blogs
 http://steve-yegge.blogspot.com/atom.xml blogs
 https://www.benkuhn.net/index.xml blogs
 https://www.netmeister.org/blog/rss.xml blogs
+http://www.sheshbabu.com/atom.xml blogs
+https://nedbatchelder.com/blog/rss.xml blogs
+https://fasterthanli.me/index.xml blogs
+https://this-week-in-rust.org/atom.xml blogs
