@@ -70,9 +70,11 @@ set number relativenumber
 set laststatus=2
 set encoding=utf-8
 set list
-set termguicolors
 set showcmd
 set lazyredraw
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " Makes search act like search in modern browsers
 set incsearch
