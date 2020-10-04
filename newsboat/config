@@ -6,7 +6,7 @@ unbind-key L
 unbind-key c
 unbind-key ,
 
-macro w set browser "vlc %u" ; open-in-browser ; set browser "firefox %u"
+macro w set browser "vlc %u" ; open-in-browser ; set browser "firefox-nightly %u"
 
 # bind keys
 bind-key ; macro-prefix
