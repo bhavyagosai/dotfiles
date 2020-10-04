@@ -12,7 +12,7 @@ export PATH="$PATH:/opt/scilab/bin"
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="firefox-nightly"
 export READER="zathura"
 export STATUSBAR="polybar"
 
