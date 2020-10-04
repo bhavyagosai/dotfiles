@@ -240,22 +240,6 @@ map <leader>f :Goyo<CR>
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-"Ale
-
-"let g:ale_linters = {
-"\   'javascript': ['eslint'],
-"\   'python': ['pylint']
-"\}
-
-"let g:ale_fixers = {
-"\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-"\   'javascript': ['eslint'],
-"\   'python': ['black']
-"\}
-
-"let g:ale_fix_on_save = 1
-
-
 " Ultisnips
 "" Trigger configuration.
 let g:UltiSnipsExpandTrigger="<c-b>"
