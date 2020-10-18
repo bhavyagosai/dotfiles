@@ -58,7 +58,7 @@ set magic
 set foldcolumn=1
 
 " Configure backspace so it acts as it should act
-set backspace=eol,start,indent
+set backspace=indent,eol,start
 
 " Split open at the bottom and right, this is best in life
 set splitbelow splitright
