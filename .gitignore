@@ -71,3 +71,12 @@ pipewire-media-session
 kdenlive-layoutsrc
 kdenliverc
 kdeglobals
+Electron/
+light/
+VirtualBox
+cef_user_data/
+lutris/
+mirage/
+protonfixes
+pulse.old/
+syncplay.ini
