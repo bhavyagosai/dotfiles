@@ -80,3 +80,4 @@ mirage/
 protonfixes
 pulse.old/
 syncplay.ini
+nvim/autoload/plug.vim.old
