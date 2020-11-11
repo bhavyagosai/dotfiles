@@ -4,8 +4,8 @@
 let mapleader=" "
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
 
+map <silent> <leader><cr> :noh<cr>
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
 
@@ -67,14 +67,14 @@ map <leader>tn :tabnext
 
 " Code navigation shortcuts
 nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> <leader>K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <leader>gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <leader>1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> <leader>gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <leader>g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> <leader>gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <silent> <leader>gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <leader>ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 
 " Goto previous/next diagnostic warning/error
 nnoremap <silent> g[ <cmd>PrevDiagnosticCycle<cr>
