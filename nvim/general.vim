@@ -75,4 +75,3 @@ set softtabstop=4
 set lbr
 set tw=500
 set nowrap
-

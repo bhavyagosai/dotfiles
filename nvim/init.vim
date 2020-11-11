@@ -20,23 +20,22 @@ endif
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 " ----------------------------------------------------------------------- "
 " PRODUCTIVITY
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " SYNTAX
 Plug 'ap/vim-css-color'
-Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'jiangmiao/auto-pairs'
+Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " AESTHETICS
 Plug 'morhetz/gruvbox'
@@ -48,11 +47,10 @@ Plug 'junegunn/limelight.vim'
 " UTILS
 Plug 'sirver/UltiSnips'
 Plug 'godlygeek/tabular'
-Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
+Plug 'sheerun/vim-polyglot'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " ICEBOX
 " Plug 'ycm-core/YouCompleteMe'
@@ -152,6 +150,7 @@ endfunction
 " Visualize diagnostics
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_trimmed_virtual_text = '40'
+
 " Don't show diagnostics while in insert mode
 let g:diagnostic_insert_delay = 1
 
@@ -163,3 +162,10 @@ autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 
 " See :help lua-highlight
 au TextYankPost * silent! lua vim.highlight.on_yank()
+
+" Number toggle
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END
