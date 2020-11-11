@@ -4,8 +4,11 @@
 let mapleader=" "
 
 " Disable highlight when <leader><cr> is pressed
-
 map <silent> <leader><cr> :noh<cr>
+
+" Goyo
+map <leader>f :Goyo<CR>
+
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
 
