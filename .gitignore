@@ -6,7 +6,6 @@ zsh/.zcompdump-kingdom-5.8
 zsh/histfile
 discord/
 configstore/
-nvim/plugged/
 tmux/plugins/
 htop/
 libfm/
@@ -80,4 +79,3 @@ mirage/
 protonfixes
 pulse.old/
 syncplay.ini
-nvim/autoload/plug.vim.old
