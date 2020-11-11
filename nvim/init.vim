@@ -6,10 +6,10 @@
 
 
 " Auto download
-if ! filereadable(system('echo -n "$XDG_CONFIG_HOME/nvim/autoload/plug.vim"'))
+if ! filereadable(system('echo -n "$XDG_DATA_HOME/nvim/autoload/plug.vim"'))
     echo "Downloading junegunn/vim-plug to manage plugins..."
-    silent !mkdir -p $XDG_CONFIG_HOME/nvim/autoload/
-    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $XDG_CONFIG_HOME/nvim/autoload/plug.vim
+    silent !mkdir -p $XDG_DATA_HOME/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $XDG_DATA_HOME/nvim/autoload/plug.vim
     autocmd VimEnter * PlugInstall
 endif
 
@@ -17,7 +17,7 @@ endif
 "       Begin Plugins Section      "
 "=================================="
 
-call plug#begin()
+call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 " ----------------------------------------------------------------------- "
 " PRODUCTIVITY
 Plug 'tpope/vim-fugitive'
@@ -25,10 +25,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
-" Plug 'nvim-lua/diagnostic-nvim'
-" Plug 'tjdevries/lsp_extensions.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
+Plug 'tjdevries/lsp_extensions.nvim'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
@@ -58,7 +58,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " ICEBOX
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 " Plug 'camspiers/animate.vim'
 " Plug 'camspiers/lens.vim'
 " ----------------------------------------------------------------------- "
