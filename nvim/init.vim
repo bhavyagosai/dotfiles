@@ -26,7 +26,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
