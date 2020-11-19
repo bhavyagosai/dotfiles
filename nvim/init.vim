@@ -20,7 +20,6 @@ endif
 call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 " ----------------------------------------------------------------------- "
 " PRODUCTIVITY
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -28,12 +27,16 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " SYNTAX
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " AESTHETICS
