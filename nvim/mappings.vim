@@ -25,9 +25,6 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader>ps :Rg<SPACE>
 
-" Fzf
-nnoremap <c-p> :GFiles<CR>
-
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
