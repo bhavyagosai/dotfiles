@@ -40,7 +40,7 @@ module-margin-right = 1
 ; font-0 = JetBrainsMonoMedium:pixelsize=10;
 ; font-1 = HackNerdFont:pixelsize=10;
 ; font-3 = IPAGothic:fontformat=truetype:pixelsize=10:antialias=false;
-font-0 = "Source Code Pro Semibold:size=9;1"
+font-0 = "JetBrains Mono Medium:size=9;1"
 font-1 = NotoColorEmoji:fontformat=truetype:scale=11:antialias=false;
 font-2 = "Font Awesome 5 Free:style=Solid:size=9;1"
 font-3 = "Font Awesome 5 Brands:size=9;1"
