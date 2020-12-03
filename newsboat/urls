@@ -1,6 +1,7 @@
 "query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
 "query:Unread:unread = \"yes\"" meta
 
+https://www.joelonsoftware.com/feed/ blogs
 https://news.ycombinator.com/rss
 https://stopa.io/feed.rss blogs
 https://www.archlinux.org/feeds/news linux
@@ -42,3 +43,4 @@ https://nora.codes/index.xml blogs
 https://blog.codinghorror.com/rss/ blogs
 https://nullprogram.com/feed/ blogs
 https://hugotunius.se/feed.xml blogs
+https://nns.ee/blog/feed.xml blogs
