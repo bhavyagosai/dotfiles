@@ -1,21 +1,21 @@
 "====================================="
 "          Plugin Settings            "
 "====================================="
-" YouCompleteMe
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_key_list_stop_completion = ['<C-y>']
-let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
-let g:ycm_language_server =
-\ [
-\   {
-\     'name': 'rust',
-\     'cmdline': ['rust-analyzer'],
-\     'filetypes': ['rust'],
-\     'project_root_files': ['Cargo.toml']
-\   }
-\ ]
+" " YouCompleteMe
+" set completeopt-=preview
+" let g:ycm_add_preview_to_completeopt = 0
+" let g:ycm_key_list_stop_completion = ['<C-y>']
+" let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+" let g:ycm_language_server =
+" \ [
+" \   {
+" \     'name': 'rust',
+" \     'cmdline': ['rust-analyzer'],
+" \     'filetypes': ['rust'],
+" \     'project_root_files': ['Cargo.toml']
+" \   }
+" \ ]
 
 " Plasticboy/ vim-markdown
 let g:vim_markdown_folding_disabled = 1
@@ -52,11 +52,9 @@ set shortmess+=c
 " Configure LSP
 lua require('lsp_config')
 
-" Trigger completion with <Tab>
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ completion#trigger_completion()
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 function! s:check_back_space() abort
     let col = col('.') - 1
@@ -74,7 +72,7 @@ let g:diagnostic_insert_delay = 1
 " 300ms of no cursor movement to trigger CursorHold
 set updatetime=300
 " Show diagnostic popup on cursor hold
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 
 " See :help lua-highlight
 au TextYankPost * silent! lua vim.highlight.on_yank()
@@ -86,3 +84,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
+
+" rust.vim
+let g:rustfmt_autosave = 1

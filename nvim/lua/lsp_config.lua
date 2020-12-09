@@ -4,19 +4,19 @@ local on_attach = function(client)
     require'completion'.on_attach(client)
 end
 
--- nvim_lsp object
-local nvim_lsp = require'nvim_lsp'
+-- lspconfig object
+local lspconfig = require'lspconfig'
 local nvim_treesitter_config = require'nvim-treesitter.configs'
 local telescope = require'telescope'
 
 -- Setup LSP's
-nvim_lsp.rust_analyzer.setup{ on_attach=on_attach }
-nvim_lsp.clangd.setup{ on_attach=on_attach }
-nvim_lsp.tsserver.setup{ on_attach=on_attach }
-nvim_lsp.sumneko_lua.setup{ on_attach=on_attach }
-nvim_lsp.vimls.setup{ on_attach=on_attach }
-nvim_lsp.yamlls.setup{ on_attach=on_attach }
-nvim_lsp.pyls.setup{ on_attach=on_attach }
+lspconfig.rust_analyzer.setup{ on_attach=on_attach }
+lspconfig.clangd.setup{ on_attach=on_attach }
+lspconfig.tsserver.setup{ on_attach=on_attach }
+lspconfig.sumneko_lua.setup{ on_attach=on_attach }
+lspconfig.vimls.setup{ on_attach=on_attach }
+lspconfig.yamlls.setup{ on_attach=on_attach }
+lspconfig.pyls.setup{ on_attach=on_attach }
 
 -- Setup Treesitter
 nvim_treesitter_config.setup{
