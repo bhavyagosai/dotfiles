@@ -52,10 +52,9 @@ Plug 'sirver/UltiSnips'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'sheerun/vim-polyglot'
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " ICEBOX
+" Plug 'xuhdev/vim-latex-live-preview'
 " Plug 'ycm-core/YouCompleteMe'
 " Plug 'camspiers/animate.vim'
 " Plug 'camspiers/lens.vim'
