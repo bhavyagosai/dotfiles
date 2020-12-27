@@ -1,7 +1,7 @@
 [Added Associations]
 image/png=feh.desktop;chromium.desktop;mupdf.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;
 application/pdf=gimp.desktop;libreoffice-draw.desktop;chromium.desktop;mupdf.desktop;org.inkscape.Inkscape.desktop;
-text/plain=nvim.desktop;sublime_text_3.desktop;vim.desktop;userapp-"$TERMINAL -e nvim"-D30TK0.desktop;
+text/plain=vim.desktop;userapp-"$TERMINAL -e nvim"-YUZYT0.desktop;nvim.desktop;sublime_text_3.desktop;userapp-"$TERMINAL -e nvim"-D30TK0.desktop;
 application/json=sublime_text_3.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
 application/x-shellscript=sublime_text_3.desktop;nvim.desktop;
@@ -19,14 +19,16 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-image/jpeg=gimp.desktop;feh.desktop;
-video/x-matroska=vlc.desktop;
+image/jpeg=feh.desktop;gimp.desktop;
+video/x-matroska=mpv.desktop;vlc.desktop;
 audio/x-mod=nvim.desktop;
 video/mp4=mpv.desktop;vlc.desktop;
 text/x-c++src=nvim.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
 application/postscript=org.pwmt.zathura-ps.desktop;
 video/x-msvideo=vlc.desktop;
+image/gif=feh.desktop;
+video/x-flv=mpv.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
@@ -44,6 +46,7 @@ application/x-extension-shtml=userapp-Nightly-HDKUR0.desktop
 application/xhtml+xml=userapp-Nightly-HDKUR0.desktop
 application/x-extension-xhtml=userapp-Nightly-HDKUR0.desktop
 application/x-extension-xht=userapp-Nightly-HDKUR0.desktop
-video/x-matroska=vlc.desktop
+video/x-matroska=mpv.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
+x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
