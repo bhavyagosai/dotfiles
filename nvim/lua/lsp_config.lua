@@ -6,7 +6,7 @@ end
 
 -- lspconfig object
 local lspconfig = require'lspconfig'
-local nvim_treesitter_config = require'nvim-treesitter.configs'
+-- local nvim_treesitter_config = require'nvim-treesitter.configs'
 local telescope = require'telescope'
 
 -- Setup LSP's
@@ -14,20 +14,20 @@ lspconfig.rust_analyzer.setup{ on_attach=on_attach }
 lspconfig.clangd.setup{ on_attach=on_attach }
 lspconfig.tsserver.setup{ on_attach=on_attach }
 lspconfig.sumneko_lua.setup{ on_attach=on_attach }
-lspconfig.vimls.setup{ on_attach=on_attach }
+-- lspconfig.vimls.setup{ on_attach=on_attach }
 lspconfig.yamlls.setup{ on_attach=on_attach }
 lspconfig.pyls.setup{ on_attach=on_attach }
 
 -- Setup Treesitter
-nvim_treesitter_config.setup{
-        ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-        highlight = {
-            enable = true,
-        },
-        indent = {
-            enable=true
-        }
-    }
+-- nvim_treesitter_config.setup{
+--         ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+--         highlight = {
+--             enable = true,
+--         },
+--         indent = {
+--             enable=true
+--         }
+--     }
 
 -- Setup Telescope
 telescope.setup {

@@ -12,7 +12,7 @@ set laststatus=2
 set encoding=utf-8
 set list
 set showcmd
-set lazyredraw
+" set lazyredraw
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -55,7 +55,7 @@ set mouse=a
 set magic
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+" set foldcolumn=1
 
 " Configure backspace so it acts as it should act
 set backspace=indent,eol,start
