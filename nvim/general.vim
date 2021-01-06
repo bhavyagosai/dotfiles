@@ -12,7 +12,7 @@ set laststatus=2
 set encoding=utf-8
 set list
 set showcmd
-" set lazyredraw
+set lazyredraw
 if (has("termguicolors"))
   set termguicolors
 endif

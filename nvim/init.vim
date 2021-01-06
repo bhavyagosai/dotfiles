@@ -17,7 +17,7 @@ endif
 "       Begin Plugins Section      "
 "=================================="
 
-call plug#begin('$XDG_DATA_HOME/nvim/plugged')
+ call plug#begin('$XDG_DATA_HOME/nvim/plugged')
 " ----------------------------------------------------------------------- "
 " PRODUCTIVITY
 Plug 'tpope/vim-fugitive'
@@ -36,7 +36,7 @@ Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 Plug 'mzlogin/vim-markdown-toc'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'rust-lang/rust.vim'
 
