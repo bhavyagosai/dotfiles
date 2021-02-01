@@ -51,8 +51,6 @@ export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
-export CALIBRE_USE_DARK_PALETTE=1
-
 # For Jdownloader to work on bspwm
 export _JAVA_AWT_WM_NONREPARENTING=1
 
