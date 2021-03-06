@@ -1,5 +1,5 @@
 [Added Associations]
-image/png=feh.desktop;chromium.desktop;mupdf.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;
+image/png=gimp.desktop;feh.desktop;chromium.desktop;mupdf.desktop;userapp-feh-NFMDJ0.desktop;userapp-feh-8WGFJ0.desktop;
 application/pdf=gimp.desktop;libreoffice-draw.desktop;chromium.desktop;mupdf.desktop;org.inkscape.Inkscape.desktop;
 text/plain=vim.desktop;userapp-"$TERMINAL -e nvim"-YUZYT0.desktop;nvim.desktop;sublime_text_3.desktop;userapp-"$TERMINAL -e nvim"-D30TK0.desktop;
 application/json=sublime_text_3.desktop;
@@ -19,7 +19,7 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
-image/jpeg=mupdf.desktop;feh.desktop;gimp.desktop;
+image/jpeg=feh.desktop;gimp.desktop;mupdf.desktop;
 video/x-matroska=mpv.desktop;vlc.desktop;
 audio/x-mod=nvim.desktop;
 video/mp4=vlc.desktop;mpv.desktop;
@@ -29,6 +29,7 @@ application/postscript=org.pwmt.zathura-ps.desktop;
 video/x-msvideo=vlc.desktop;
 image/gif=feh.desktop;
 video/x-flv=mpv.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-9XULY0.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
@@ -51,3 +52,4 @@ x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
 x-scheme-handler/discord-478576776990425110=discord-478576776990425110.desktop
 x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-9XULY0.desktop
