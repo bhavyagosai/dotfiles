@@ -13,6 +13,7 @@ set encoding=utf-8
 set list
 set showcmd
 set lazyredraw
+set hidden
 if (has("termguicolors"))
   set termguicolors
 endif
