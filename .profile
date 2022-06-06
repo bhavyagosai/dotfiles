@@ -23,7 +23,6 @@ export STATUSBAR="polybar"
 
 # Language's Home directory
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
-export CARGO_TARGET_DIR="$HOME/.cache/cargo/cache"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export JULIA_DEPOT_PATH="$HOME/.local/share/julia"
@@ -66,4 +65,3 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
 # Start graphical server on tty1 if not already running.
 # [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx
-

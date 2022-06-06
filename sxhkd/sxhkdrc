@@ -153,3 +153,6 @@ super + d
 
 super + Return
   $TERMINAL
+
+super + shift + p
+    flameshot gui --delay 1000
