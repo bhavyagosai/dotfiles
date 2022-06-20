@@ -1,7 +1,7 @@
-local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true }
+local opts = { noremap = true, silent = false }
+local telescope = require('telescope.builtin')
 
-keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
-keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
-keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+vim.keymap.set("n", "<leader>ff", telescope.find_files, opts)
+vim.keymap.set("n", "<leader>fg", telescope.live_grep, opts)
+vim.keymap.set("n", "<leader>fb", telescope.buffers, opts)
+vim.keymap.set("n", "<leader>fh", telescope.help_tags, opts)
