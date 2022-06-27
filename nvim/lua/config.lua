@@ -29,6 +29,10 @@ require("packer").startup(function()
     use({ "jiangmiao/auto-pairs" })
     use({ "tpope/vim-surround" })
     use({ "j-hui/fidget.nvim" })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)
 
 vim.g.mapleader = " "
