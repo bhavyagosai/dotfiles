@@ -9,13 +9,18 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		['<C-p>'] = cmp.mapping.select_prev_item(),
+		['<C-n>'] = cmp.mapping.select_next_item(),
+		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-y>"] = cmp.config.disable,
 		["<C-e>"] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<CR>"] = cmp.mapping.confirm({
+			behavior = cmp.ConfirmBehavior.Insert,
+			select = true
+		}),
 		-- ['<Tab>'] = function(fallback)
 		--     if cmp.visible() then
 		--         cmp.select_next_item()
@@ -44,9 +49,25 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
-
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 	experimental = {
 		native_menu = false,
 		ghost_text = true,
+	},
+	formatting = {
+		fields = { 'menu', 'abbr', 'kind' },
+		format = function(entry, item)
+			local menu_icon = {
+				nvim_lsp = 'λ',
+				vsnip = '⋗',
+				buffer = 'Ω',
+				path = '🖫',
+			}
+			item.menu = menu_icon[entry.source.name]
+			return item
+		end,
 	},
 })
