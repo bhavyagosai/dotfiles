@@ -1,0 +1,4 @@
+- ncdu
+- exa
+- fd
+- ripgrep
