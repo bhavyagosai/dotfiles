@@ -9,8 +9,8 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-		['<C-p>'] = cmp.mapping.select_prev_item(),
-		['<C-n>'] = cmp.mapping.select_next_item(),
+		["<C-p>"] = cmp.mapping.select_prev_item(),
+		["<C-n>"] = cmp.mapping.select_next_item(),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-y>"] = cmp.config.disable,
 		["<C-e>"] = cmp.mapping({
@@ -58,13 +58,13 @@ cmp.setup({
 		ghost_text = true,
 	},
 	formatting = {
-		fields = { 'menu', 'abbr', 'kind' },
+		fields = { "menu", "abbr", "kind" },
 		format = function(entry, item)
 			local menu_icon = {
-				nvim_lsp = 'λ',
-				vsnip = '⋗',
-				buffer = 'Ω',
-				path = '🖫',
+				nvim_lsp = "λ",
+				vsnip = "⋗",
+				buffer = "Ω",
+				path = "🖫",
 			}
 			item.menu = menu_icon[entry.source.name]
 			return item

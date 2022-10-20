@@ -3,6 +3,6 @@ function ls --wraps='ls -hN --color=auto --group-directories-first' --descriptio
   if which exa &> /dev/null
     exa -hF --sort=extension --group-directories-first $argv
   else
-    ls -hNF --color=auto --sort=extension $argv;
+    command ls -hNF --color=auto --sort=extension $argv;
   end
 end
