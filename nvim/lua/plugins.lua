@@ -39,6 +39,7 @@ require("packer").startup(function()
     use({
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     })
+    use({ "mzlogin/vim-markdown-toc" })
     -- Icebox
     -- use({ "lewis6991/impatient.nvim" })
 end)
