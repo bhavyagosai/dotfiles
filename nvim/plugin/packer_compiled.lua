@@ -223,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/henil/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-markdown-toc"] = {
+    loaded = true,
+    path = "/home/henil/.local/share/nvim/site/pack/packer/start/vim-markdown-toc",
+    url = "https://github.com/mzlogin/vim-markdown-toc"
   }
 }
 

@@ -29,7 +29,7 @@ vim.opt.lazyredraw = true
 vim.opt.termguicolors = true
 vim.opt.swapfile = true
 vim.opt.undofile = true
-vim.opt.laststatus = 3
+-- vim.opt.laststatus = 3
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
@@ -40,6 +40,9 @@ vim.opt.colorcolumn = "80"
 vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.clipboard = "unnamedplus"
+vim.opt.updatetime = 250
+
 
 --Set completeopt to have a better completion experience
 -- :help completeopt
@@ -51,5 +54,14 @@ vim.opt.splitright = true
 vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
 
 -- Move this to a new autogroups file
-vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
-vim.api.nvim_set_option("updatetime", 4000)
+-- vim.cmd [[au TextYankPost * silent! lua vim.highlight.on_yank()]]
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
+})
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

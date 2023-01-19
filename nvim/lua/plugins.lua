@@ -1,48 +1,58 @@
-require("packer").startup(function()
-    local use = require("packer").use
-    use({ "wbthomason/packer.nvim" })
-    use({ "L3MON4D3/LuaSnip" })
-    use({ "neovim/nvim-lspconfig" })
-    use({ "karb94/neoscroll.nvim" })
-    use({ "numToStr/Comment.nvim" })
-    use({ "saadparwaiz1/cmp_luasnip" })
-    use({ "norcalli/nvim-colorizer.lua" })
-    use({ "williamboman/mason-lspconfig.nvim" })
-    use({ "williamboman/mason.nvim" })
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
+end
+vim.opt.rtp:prepend(lazypath)
 
-    use({
-        "nvim-telescope/telescope.nvim",
-        requires = { "nvim-lua/plenary.nvim" },
-    })
-    use({ "nvim-lua/popup.nvim" })
-    use({ "lukas-reineke/indent-blankline.nvim" })
-    use({ "windwp/nvim-autopairs" })
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use({ "hrsh7th/nvim-cmp" })
-    use({ "hrsh7th/cmp-nvim-lua" })
-    use({ "hrsh7th/cmp-nvim-lsp" })
-    use({ "hrsh7th/cmp-path" })
-    use({ "hrsh7th/cmp-emoji" })
-    use({ "ellisonleao/gruvbox.nvim", requires = "rktjmp/lush.nvim" })
-    use({
-        "hoob3rt/lualine.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-    })
-    use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
-    use({ "anuvyklack/pretty-fold.nvim" })
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
-    use({ "kylechui/nvim-surround" })
-    use({ "j-hui/fidget.nvim" })
-    use({
-        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    })
-    use({ "mzlogin/vim-markdown-toc" })
-    -- Icebox
-    -- use({ "lewis6991/impatient.nvim" })
-end)
+require("lazy").setup({
+	{ "wbthomason/packer.nvim" },
+	{ "L3MON4D3/LuaSnip" },
+	{ "neovim/nvim-lspconfig" },
+	{ "karb94/neoscroll.nvim" },
+	{ "numToStr/Comment.nvim" },
+	{ "saadparwaiz1/cmp_luasnip" },
+	{ "norcalli/nvim-colorizer.lua" },
+	{ "williamboman/mason-lspconfig.nvim" },
+	{ "williamboman/mason.nvim" },
+	{
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+	{ "nvim-lua/popup.nvim" },
+	{ "lukas-reineke/indent-blankline.nvim" },
+	{ "windwp/nvim-autopairs" },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter-textobjects" },
+	{ "hrsh7th/nvim-cmp" },
+	{ "hrsh7th/cmp-nvim-lua" },
+	{ "hrsh7th/cmp-nvim-lsp" },
+	{ "hrsh7th/cmp-path" },
+	{ "hrsh7th/cmp-emoji" },
+	{ "ellisonleao/gruvbox.nvim", requires = "rktjmp/lush.nvim" },
+	{
+		"hoob3rt/lualine.nvim",
+		dependencies = "kyazdani42/nvim-web-devicons",
+	},
+	{ "folke/trouble.nvim", dependencies = "kyazdani42/nvim-web-devicons" },
+	{ "anuvyklack/pretty-fold.nvim" },
+	{
+		"iamcco/markdown-preview.nvim",
+		build = function() vim.fn["mkdp#util#install"]() end,
+	},
+	{ "kylechui/nvim-surround" },
+	{ "j-hui/fidget.nvim" },
+	{ "https://git.sr.ht/~whynothugo/lsp_lines.nvim" },
+	{ "mzlogin/vim-markdown-toc" },
+	-- Icebox
+	-- { "lewis6991/impatient.nvim" },
+})
 
 -- require("impatient")
 
